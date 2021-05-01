@@ -85,24 +85,6 @@ Wire Wire Line
 	1800 1200 1800 1100
 $Comp
 L Device:R R?
-U 1 1 608AA9A4
-P 7200 2250
-F 0 "R?" H 7130 2204 50  0000 R CNN
-F 1 "10K" V 7200 2300 50  0000 R CNN
-F 2 "" V 7130 2250 50  0001 C CNN
-F 3 "~" H 7200 2250 50  0001 C CNN
-	1    7200 2250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7200 2400 7500 2400
-Wire Wire Line
-	7500 2400 7500 2100
-Wire Wire Line
-	7200 2100 7200 1900
-Connection ~ 7200 1900
-$Comp
-L Device:R R?
 U 1 1 608B0CE2
 P 6950 1900
 F 0 "R?" V 6850 1900 50  0000 C CNN
@@ -126,7 +108,7 @@ F 3 "~" H 7700 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7500 1450 7500 1700
+	7500 1450 7500 1650
 $Comp
 L power:+5V #PWR?
 U 1 1 608B2604
@@ -142,20 +124,6 @@ Wire Wire Line
 	7400 1350 7500 1350
 $Comp
 L power:GND #PWR?
-U 1 1 608BD303
-P 7500 2500
-F 0 "#PWR?" H 7500 2250 50  0001 C CNN
-F 1 "GND" H 7505 2327 50  0000 C CNN
-F 2 "" H 7500 2500 50  0001 C CNN
-F 3 "" H 7500 2500 50  0001 C CNN
-	1    7500 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7500 2500 7500 2400
-Connection ~ 7500 2400
-$Comp
-L power:GND #PWR?
 U 1 1 608D3C21
 P 4050 1800
 F 0 "#PWR?" H 4050 1550 50  0001 C CNN
@@ -167,7 +135,7 @@ F 3 "" H 4050 1800 50  0001 C CNN
 $EndComp
 Text Notes 800  1050 0    50   ~ 0
 Microcontroller
-Text Notes 4300 1150 0    50   ~ 0
+Text Notes 4550 1250 0    50   ~ 0
 Power-Supply
 Text GLabel 6600 1900 0    50   Input ~ 0
 Pump
@@ -175,8 +143,6 @@ Text GLabel 2950 1500 2    50   Input ~ 0
 Pump
 Wire Wire Line
 	6600 1900 6800 1900
-Wire Notes Line
-	9300 3000 9300 500 
 Wire Notes Line
 	500  3000 9300 3000
 Text Notes 7100 850  0    50   ~ 0
@@ -283,7 +249,7 @@ Reset-button
 Wire Notes Line
 	3400 500  3400 4500
 Text Notes 2150 5350 0    50   ~ 0
-To-Do:\n- Status-LED\n- Programmer-interface\n- Sensor nachbauen\n- alles zusammen verbinden
+To-Do:\n- Status-LED\n- Programmer-interface\n- alles zusammen verbinden
 $Comp
 L Device:R_POT RV?
 U 1 1 60939D9E
@@ -327,8 +293,6 @@ Wire Wire Line
 	4550 3850 4400 3850
 Wire Notes Line
 	5800 500  5800 4500
-Wire Notes Line
-	500  4500 5800 4500
 Text Notes 3750 3200 0    50   ~ 0
 Potentiometer for setting treshold humidity
 Text GLabel 2750 1350 2    50   Input ~ 0
@@ -367,4 +331,151 @@ Wire Wire Line
 Wire Wire Line
 	4050 1300 4050 1400
 Connection ~ 4050 1400
+Wire Wire Line
+	7500 2100 7500 2500
+$Comp
+L Transistor_BJT:BC547 Q?
+U 1 1 608DC426
+P 7100 3850
+F 0 "Q?" V 7335 3850 50  0000 C CNN
+F 1 "BC547" V 7426 3850 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7300 3775 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 7100 3850 50  0001 L CNN
+	1    7100 3850
+	0    -1   1    0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 608DCD99
+P 7500 3450
+F 0 "J?" H 7580 3442 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 7580 3351 50  0000 L CNN
+F 2 "" H 7500 3450 50  0001 C CNN
+F 3 "~" H 7500 3450 50  0001 C CNN
+	1    7500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 608DD3E9
+P 7000 3450
+F 0 "R?" V 6900 3450 50  0000 C CNN
+F 1 "220" V 7000 3450 50  0000 C CNN
+F 2 "" V 6930 3450 50  0001 C CNN
+F 3 "~" H 7000 3450 50  0001 C CNN
+	1    7000 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 3450 7300 3450
+Wire Wire Line
+	7100 3650 7100 3550
+Wire Wire Line
+	7100 3550 7300 3550
+$Comp
+L power:+5V #PWR?
+U 1 1 608E30DE
+P 6500 3950
+F 0 "#PWR?" H 6500 3800 50  0001 C CNN
+F 1 "+5V" H 6515 4123 50  0000 C CNN
+F 2 "" H 6500 3950 50  0001 C CNN
+F 3 "" H 6500 3950 50  0001 C CNN
+	1    6500 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3450 6850 3950
+Wire Wire Line
+	6850 3950 6500 3950
+Wire Wire Line
+	6850 3950 6900 3950
+Connection ~ 6850 3950
+$Comp
+L Device:R R?
+U 1 1 608E5A48
+P 7650 3950
+F 0 "R?" V 7550 3950 50  0000 C CNN
+F 1 "220" V 7650 3950 50  0000 C CNN
+F 2 "" V 7580 3950 50  0001 C CNN
+F 3 "~" H 7650 3950 50  0001 C CNN
+	1    7650 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 3950 7400 3950
+$Comp
+L power:GND #PWR?
+U 1 1 608BD303
+P 7500 2500
+F 0 "#PWR?" H 7500 2250 50  0001 C CNN
+F 1 "GND" H 7505 2327 50  0000 C CNN
+F 2 "" H 7500 2500 50  0001 C CNN
+F 3 "" H 7500 2500 50  0001 C CNN
+	1    7500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 608E6C80
+P 8050 3950
+F 0 "#PWR?" H 8050 3700 50  0001 C CNN
+F 1 "GND" H 8055 3777 50  0000 C CNN
+F 2 "" H 8050 3950 50  0001 C CNN
+F 3 "" H 8050 3950 50  0001 C CNN
+	1    8050 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3950 7800 3950
+Text Notes 7700 3500 0    50   ~ 0
+Sensor Connection
+Text GLabel 7500 4250 2    50   Input ~ 0
+Sensor
+Wire Wire Line
+	7500 4250 7400 4250
+Wire Wire Line
+	7400 4250 7400 3950
+Connection ~ 7400 3950
+Wire Wire Line
+	7400 3950 7500 3950
+Text GLabel 2950 1700 2    50   Input ~ 0
+Sensor
+Wire Notes Line
+	9300 500  9300 4500
+Wire Notes Line
+	500  4500 9300 4500
+Text Notes 7150 3250 0    50   ~ 0
+Sensor driver
+$Comp
+L Device:R R?
+U 1 1 608EEB47
+P 7200 1650
+F 0 "R?" V 7100 1650 50  0000 C CNN
+F 1 "220" V 7200 1650 50  0000 C CNN
+F 2 "" V 7130 1650 50  0001 C CNN
+F 3 "~" H 7200 1650 50  0001 C CNN
+	1    7200 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 608ED5E0
+P 6900 1500
+F 0 "D?" V 6900 1600 50  0000 L CNN
+F 1 "LED" V 7000 1600 50  0000 L CNN
+F 2 "" H 6900 1500 50  0001 C CNN
+F 3 "~" H 6900 1500 50  0001 C CNN
+	1    6900 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 1350 7400 1350
+Connection ~ 7400 1350
+Wire Wire Line
+	6900 1650 7050 1650
+Wire Wire Line
+	7350 1650 7500 1650
+Connection ~ 7500 1650
+Wire Wire Line
+	7500 1650 7500 1700
 $EndSCHEMATC
