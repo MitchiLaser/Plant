@@ -14,28 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:C C?
-U 1 1 6089D76D
-P 5000 2300
-F 0 "C?" H 5115 2346 50  0000 L CNN
-F 1 "47n" H 5115 2255 50  0000 L CNN
-F 2 "" H 5038 2150 50  0001 C CNN
-F 3 "~" H 5000 2300 50  0001 C CNN
-	1    5000 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:LM7805_TO220 U?
-U 1 1 6089DE2D
-P 4600 2150
-F 0 "U?" H 4600 2392 50  0000 C CNN
-F 1 "LM7805_TO220" H 4600 2301 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4600 2375 50  0001 C CIN
-F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 4600 2100 50  0001 C CNN
-	1    4600 2150
-	1    0    0    -1  
-$EndComp
-$Comp
 L MCU_Microchip_ATtiny:ATtiny13A-PU U?
 U 1 1 6089ED63
 P 1800 1800
@@ -60,23 +38,23 @@ $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J?
 U 1 1 6089FF0A
-P 4450 1400
-F 0 "J?" H 4530 1392 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 4530 1301 50  0000 L CNN
-F 2 "" H 4450 1400 50  0001 C CNN
-F 3 "~" H 4450 1400 50  0001 C CNN
-	1    4450 1400
+P 4400 1600
+F 0 "J?" H 4480 1592 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 4480 1501 50  0000 L CNN
+F 2 "" H 4400 1600 50  0001 C CNN
+F 3 "~" H 4400 1600 50  0001 C CNN
+	1    4400 1600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Transistor_BJT:BC337 Q?
 U 1 1 608A0728
-P 7200 1950
-F 0 "Q?" H 7391 1996 50  0000 L CNN
-F 1 "BC337" H 7391 1905 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7400 1875 50  0001 L CIN
-F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7200 1950 50  0001 L CNN
-	1    7200 1950
+P 7400 1900
+F 0 "Q?" H 7591 1946 50  0000 L CNN
+F 1 "BC337" H 7591 1855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7600 1825 50  0001 L CIN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7400 1900 50  0001 L CNN
+	1    7400 1900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -106,197 +84,102 @@ Wire Wire Line
 Wire Wire Line
 	1800 1200 1800 1100
 $Comp
-L Transistor_BJT:BC337 Q?
-U 1 1 608A89D3
-P 7900 1950
-F 0 "Q?" H 8091 1996 50  0000 L CNN
-F 1 "BC337" H 8091 1905 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8100 1875 50  0001 L CIN
-F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7900 1950 50  0001 L CNN
-	1    7900 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8000 1750 7300 1750
-Wire Wire Line
-	7700 1950 7000 1950
-$Comp
 L Device:R R?
 U 1 1 608AA9A4
-P 7000 2300
-F 0 "R?" H 6930 2254 50  0000 R CNN
-F 1 "10K" V 7000 2350 50  0000 R CNN
-F 2 "" V 6930 2300 50  0001 C CNN
-F 3 "~" H 7000 2300 50  0001 C CNN
-	1    7000 2300
+P 7200 2250
+F 0 "R?" H 7130 2204 50  0000 R CNN
+F 1 "10K" V 7200 2300 50  0000 R CNN
+F 2 "" V 7130 2250 50  0001 C CNN
+F 3 "~" H 7200 2250 50  0001 C CNN
+	1    7200 2250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7300 2150 8000 2150
+	7200 2400 7500 2400
 Wire Wire Line
-	7000 2450 7300 2450
+	7500 2400 7500 2100
 Wire Wire Line
-	7300 2450 7300 2150
-Connection ~ 7300 2150
-Wire Wire Line
-	7000 2150 7000 1950
-Connection ~ 7000 1950
+	7200 2100 7200 1900
+Connection ~ 7200 1900
 $Comp
 L Device:R R?
 U 1 1 608B0CE2
-P 6750 1950
-F 0 "R?" V 6650 1950 50  0000 C CNN
-F 1 "1K" V 6750 1950 50  0000 C CNN
-F 2 "" V 6680 1950 50  0001 C CNN
-F 3 "~" H 6750 1950 50  0001 C CNN
-	1    6750 1950
+P 6950 1900
+F 0 "R?" V 6850 1900 50  0000 C CNN
+F 1 "1K" V 6950 1900 50  0000 C CNN
+F 2 "" V 6880 1900 50  0001 C CNN
+F 3 "~" H 6950 1900 50  0001 C CNN
+	1    6950 1900
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6900 1950 7000 1950
+	7100 1900 7200 1900
 $Comp
 L Connector:Screw_Terminal_01x02 J?
 U 1 1 608B19B6
-P 8200 1400
-F 0 "J?" H 8280 1392 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 8280 1301 50  0000 L CNN
-F 2 "" H 8200 1400 50  0001 C CNN
-F 3 "~" H 8200 1400 50  0001 C CNN
-	1    8200 1400
+P 7700 1350
+F 0 "J?" H 7780 1342 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 7780 1251 50  0000 L CNN
+F 2 "" H 7700 1350 50  0001 C CNN
+F 3 "~" H 7700 1350 50  0001 C CNN
+	1    7700 1350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8000 1500 8000 1750
-Connection ~ 8000 1750
+	7500 1450 7500 1700
 $Comp
 L power:+5V #PWR?
 U 1 1 608B2604
-P 7900 1400
-F 0 "#PWR?" H 7900 1250 50  0001 C CNN
-F 1 "+5V" H 7915 1573 50  0000 C CNN
-F 2 "" H 7900 1400 50  0001 C CNN
-F 3 "" H 7900 1400 50  0001 C CNN
-	1    7900 1400
+P 7400 1350
+F 0 "#PWR?" H 7400 1200 50  0001 C CNN
+F 1 "+5V" H 7415 1523 50  0000 C CNN
+F 2 "" H 7400 1350 50  0001 C CNN
+F 3 "" H 7400 1350 50  0001 C CNN
+	1    7400 1350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7900 1400 8000 1400
+	7400 1350 7500 1350
 $Comp
 L power:GND #PWR?
 U 1 1 608BD303
-P 7300 2550
-F 0 "#PWR?" H 7300 2300 50  0001 C CNN
-F 1 "GND" H 7305 2377 50  0000 C CNN
-F 2 "" H 7300 2550 50  0001 C CNN
-F 3 "" H 7300 2550 50  0001 C CNN
-	1    7300 2550
+P 7500 2500
+F 0 "#PWR?" H 7500 2250 50  0001 C CNN
+F 1 "GND" H 7505 2327 50  0000 C CNN
+F 2 "" H 7500 2500 50  0001 C CNN
+F 3 "" H 7500 2500 50  0001 C CNN
+	1    7500 2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7300 2550 7300 2450
-Connection ~ 7300 2450
-$Comp
-L Device:C C?
-U 1 1 608CBE2D
-P 4200 2300
-F 0 "C?" H 4000 2350 50  0000 L CNN
-F 1 "100n" H 4000 2250 50  0000 L CNN
-F 2 "" H 4238 2150 50  0001 C CNN
-F 3 "~" H 4200 2300 50  0001 C CNN
-	1    4200 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 2150 4200 2150
-Wire Wire Line
-	4200 2450 4600 2450
-Connection ~ 4600 2450
-Wire Wire Line
-	4600 2450 5000 2450
-Wire Wire Line
-	4900 2150 5000 2150
-$Comp
-L power:+5V #PWR?
-U 1 1 608CE499
-P 5000 2100
-F 0 "#PWR?" H 5000 1950 50  0001 C CNN
-F 1 "+5V" H 5015 2273 50  0000 C CNN
-F 2 "" H 5000 2100 50  0001 C CNN
-F 3 "" H 5000 2100 50  0001 C CNN
-	1    5000 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5000 2100 5000 2150
-Connection ~ 5000 2150
-$Comp
-L power:GND #PWR?
-U 1 1 608CF90D
-P 4600 2550
-F 0 "#PWR?" H 4600 2300 50  0001 C CNN
-F 1 "GND" H 4605 2377 50  0000 C CNN
-F 2 "" H 4600 2550 50  0001 C CNN
-F 3 "" H 4600 2550 50  0001 C CNN
-	1    4600 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4600 2550 4600 2450
-$Comp
-L power:+12V #PWR?
-U 1 1 608D24BF
-P 4200 2100
-F 0 "#PWR?" H 4200 1950 50  0001 C CNN
-F 1 "+12V" H 4215 2273 50  0000 C CNN
-F 2 "" H 4200 2100 50  0001 C CNN
-F 3 "" H 4200 2100 50  0001 C CNN
-	1    4200 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4200 2100 4200 2150
-Connection ~ 4200 2150
+	7500 2500 7500 2400
+Connection ~ 7500 2400
 $Comp
 L power:GND #PWR?
 U 1 1 608D3C21
-P 4200 1500
-F 0 "#PWR?" H 4200 1250 50  0001 C CNN
-F 1 "GND" H 4205 1327 50  0000 C CNN
-F 2 "" H 4200 1500 50  0001 C CNN
-F 3 "" H 4200 1500 50  0001 C CNN
-	1    4200 1500
+P 4050 1800
+F 0 "#PWR?" H 4050 1550 50  0001 C CNN
+F 1 "GND" H 4055 1627 50  0000 C CNN
+F 2 "" H 4050 1800 50  0001 C CNN
+F 3 "" H 4050 1800 50  0001 C CNN
+	1    4050 1800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4200 1500 4250 1500
-$Comp
-L power:+12V #PWR?
-U 1 1 608D45C7
-P 4200 1400
-F 0 "#PWR?" H 4200 1250 50  0001 C CNN
-F 1 "+12V" H 4215 1573 50  0000 C CNN
-F 2 "" H 4200 1400 50  0001 C CNN
-F 3 "" H 4200 1400 50  0001 C CNN
-	1    4200 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4200 1400 4250 1400
 Text Notes 800  1050 0    50   ~ 0
 Microcontroller
-Text Notes 4350 950  0    50   ~ 0
+Text Notes 4550 1250 0    50   ~ 0
 Power-Supply
-Text GLabel 6400 1950 0    50   Input ~ 0
+Text GLabel 6600 1900 0    50   Input ~ 0
 Pump
 Text GLabel 2950 1500 2    50   Input ~ 0
 Pump
 Wire Wire Line
-	6400 1950 6600 1950
+	6600 1900 6800 1900
 Wire Notes Line
 	9300 3000 9300 500 
 Wire Notes Line
 	500  3000 9300 3000
-Text Notes 6900 900  0    50   ~ 0
+Text Notes 7100 850  0    50   ~ 0
 Driver for the pump
 $Comp
 L Switch:SW_Push_Dual SW?
@@ -450,4 +333,38 @@ Text Notes 3750 3200 0    50   ~ 0
 Potentiometer for setting treshold humidity
 Text GLabel 2750 1350 2    50   Input ~ 0
 Potentiometer
+$Comp
+L power:+5V #PWR?
+U 1 1 60A3F0B9
+P 4050 1300
+F 0 "#PWR?" H 4050 1150 50  0001 C CNN
+F 1 "+5V" H 4065 1473 50  0000 C CNN
+F 2 "" H 4050 1300 50  0001 C CNN
+F 3 "" H 4050 1300 50  0001 C CNN
+	1    4050 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60A4B192
+P 4050 1550
+F 0 "C?" H 3850 1600 50  0000 L CNN
+F 1 "100n" H 3850 1500 50  0000 L CNN
+F 2 "" H 4088 1400 50  0001 C CNN
+F 3 "~" H 4050 1550 50  0001 C CNN
+	1    4050 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1800 4050 1700
+Wire Wire Line
+	4050 1700 4200 1700
+Connection ~ 4050 1700
+Wire Wire Line
+	4200 1600 4200 1400
+Wire Wire Line
+	4200 1400 4050 1400
+Wire Wire Line
+	4050 1300 4050 1400
+Connection ~ 4050 1400
 $EndSCHEMATC

@@ -3,6 +3,8 @@ const unsigned int ADC_in = A0; // pin connected to the analog moisture sensor
 const unsigned int Pump_Out = 3; // pin connected to the transistor, driving the pump
 const unsigned int Pot_in = A1; // the pin connected to the potentiometer
 
+unsigned long last_Poll, wait;
+
 void setup() {
   // drive pin connected to the moisture sensor as input
   pinMode(ADC_in, INPUT);
@@ -10,30 +12,35 @@ void setup() {
   // drive pin connected to the transistor as output and close the transistor
   pinMode(Pump_Out, OUTPUT);
   digitalWrite(Pump_Out, LOW);
+  last_Poll = millis();
+
+  wait = 1000; // wait 1000 milliseconds for every sensor check , equals 1 second
 }
 
 void loop() {
 
-  // get the value from the moisture sensor
-  unsigned int Sensor_value = 0;
-  for (unsigned int i = 0; i < 10; i++) {
-    Sensor_value += analogRead(ADC_in);
-  }
-  Sensor_value /= 10;
+  if ( (millis() - wait) > last_Poll ) {
+    last_Poll = millis();
 
-  // get the value from the potentiometer
-  unsigned int Pot_value = 0;
-  for (unsigned int i = 0; i < 10; i++) {
-    Pot_value += analogRead(ADC_in);
-  }
-  Pot_value /= 10;
+    // get the value from the moisture sensor
+    unsigned int Sensor_value = 0;
+    for (unsigned int i = 0; i < 10; i++) {
+      Sensor_value += analogRead(ADC_in);
+    }
+    Sensor_value /= 10;
 
-  // if sensor value is smaller then potentiometer value then the earth is to dry -> water it
-  if (Sensor_value < Pot_value) {
-    digitalWrite(Pump_Out, HIGH);
-  } else {
-    digitalWrite(Pump_Out, LOW);
-  }
+    // get the value from the potentiometer
+    unsigned int Pot_value = 0;
+    for (unsigned int i = 0; i < 10; i++) {
+      Pot_value += analogRead(ADC_in);
+    }
+    Pot_value /= 10;
 
-  delay(1000);
+    // if sensor value is smaller then potentiometer value then the earth is to dry -> water it
+    if (Sensor_value < Pot_value) {
+      digitalWrite(Pump_Out, HIGH);
+    } else {
+      digitalWrite(Pump_Out, LOW);
+    }
+  }
 }
