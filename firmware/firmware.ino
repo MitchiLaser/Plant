@@ -6,8 +6,9 @@
 unsigned long last_Poll, wait;
 
 void setup() {
-  // drive pin connected to the moisture sensor as input
+  // drive pin connected to the moisture sensor and the potentiometer as input
   pinMode(ADC_in, INPUT);
+  pinMode(Pot_in, INPUT);
 
   // drive pin connected to the transistor as output and close the transistor
   pinMode(Pump_Out, OUTPUT);
@@ -32,7 +33,7 @@ void loop() {
     // get the value from the potentiometer
     unsigned int Pot_value = 0;
     for (unsigned int i = 0; i < 10; i++) {
-      Pot_value += analogRead(ADC_in);
+      Pot_value += analogRead(Pot_in);
     }
     Pot_value /= 10;
 
