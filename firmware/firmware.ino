@@ -1,7 +1,7 @@
 // configuration
-const unsigned int ADC_in = A0; // pin connected to the analog moisture sensor
-const unsigned int Pump_Out = 3; // pin connected to the transistor, driving the pump
-const unsigned int Pot_in = A1; // the pin connected to the potentiometer
+#define ADC_in A2 // pin connected to the analog moisture sensor
+#define Pump_Out 2 // pin connected to the transistor, driving the pump
+#define Pot_in A3 // the pin connected to the potentiometer
 
 unsigned long last_Poll, wait;
 
