@@ -12,7 +12,7 @@ void setup() {
 
   // drive pin connected to the transistor as output and close the transistor
   pinMode(Pump_Out, OUTPUT);
-  digitalWrite(Pump_Out, LOW);
+  digitalWrite(Pump_Out, HIGH);
   last_Poll = millis();
 
   wait = 1000; // wait 1000 milliseconds for every sensor check , equals 1 second
