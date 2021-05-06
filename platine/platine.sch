@@ -131,7 +131,7 @@ Pump
 Text GLabel 2500 1700 2    50   Input ~ 0
 Pump
 Wire Wire Line
-	6600 1900 6800 1900
+	6600 1900 6700 1900
 Wire Notes Line
 	500  3000 9300 3000
 Text Notes 7100 850  0    50   ~ 0
@@ -319,7 +319,7 @@ Wire Wire Line
 	4050 1300 4050 1400
 Connection ~ 4050 1400
 Wire Wire Line
-	7500 2100 7500 2500
+	7500 2100 7500 2200
 $Comp
 L Transistor_BJT:BC547 Q1
 U 1 1 608DC426
@@ -473,4 +473,23 @@ Wire Wire Line
 	2500 1900 2400 1900
 NoConn ~ 2400 1500
 NoConn ~ 2400 1600
+$Comp
+L Device:C C3
+U 1 1 6093544D
+P 6700 2050
+F 0 "C3" H 6815 2096 50  0000 L CNN
+F 1 "100µ" H 6815 2005 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6738 1900 50  0001 C CNN
+F 3 "~" H 6700 2050 50  0001 C CNN
+	1    6700 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 6700 1900
+Wire Wire Line
+	6700 1900 6800 1900
+Wire Wire Line
+	6700 2200 7500 2200
+Connection ~ 7500 2200
+Wire Wire Line
+	7500 2200 7500 2500
 $EndSCHEMATC
